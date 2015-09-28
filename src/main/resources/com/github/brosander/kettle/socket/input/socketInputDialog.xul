@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<dialog id="docker-trans-executor-step-configuration-dialog"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        title="${Docker.DockerTransExecutorDialog.Title}"
+        resizable="true"
+        buttons="accept, cancel"
+        buttonlabelaccept="${Dialog.Ok}" buttonlabelcancel="${Dialog.Cancel}"
+        ondialogaccept="handler.onAccept()"
+        ondialogcancel="handler.onCancel()"
+        height="600" width="800"
+        appicon="ui/images/spoon.ico">
+    <grid id="settings-grid">
+        <columns>
+            <column/>
+            <column flex="1"/>
+        </columns>
+        <rows>
+            <row>
+                <label value="${SocketInputDialog.StepName.Label}" align="end"/>
+                <hbox flex="1">
+                    <textbox id="step-name" flex="1" multiline="false"/>
+                </hbox>
+            </row>
+            <row>
+                <label value="${SocketInputDialog.BindAddress.Label}" align="end"/>
+                <hbox flex="1">
+                    <textbox id="bindAddress" flex="1" multiline="false"/>
+                </hbox>
+            </row>
+            <row>
+                <label value="${SocketInputDialog.Port.Label}" align="end"/>
+                <hbox flex="1">
+                    <textbox id="port" flex="1" multiline="false"/>
+                </hbox>
+            </row>
+        </rows>
+    </grid>
+</dialog>
